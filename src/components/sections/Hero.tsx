@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+    onShowPortfolio: () => void;
+}
+
+export function Hero({ onShowPortfolio }: HeroProps) {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 px-4 bg-white">
             {/* Minimal Background elements */}
@@ -60,11 +64,11 @@ export function Hero() {
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </a>
-                    <a href="#portfolio">
+                    <button onClick={onShowPortfolio}>
                         <Button variant="outline" size="lg" className="rounded-[20px] bg-white border-black/5 hover:bg-slate text-midnight">
                             Ver portafolio
                         </Button>
-                    </a>
+                    </button>
                 </motion.div>
             </div>
 

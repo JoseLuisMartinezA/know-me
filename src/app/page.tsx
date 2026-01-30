@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +39,12 @@ export default function Home() {
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#leads" className="text-midnight/60 hover:text-emerald-primary transition-colors text-sm font-medium">Servicios</a>
-            <a href="#portfolio" className="text-midnight/60 hover:text-emerald-primary transition-colors text-sm font-medium">Casos de éxito</a>
+            <button
+              onClick={() => setShowPortfolio(true)}
+              className="text-midnight/60 hover:text-emerald-primary transition-colors text-sm font-medium"
+            >
+              Casos de éxito
+            </button>
             <a href="#" className="text-midnight/60 hover:text-emerald-primary transition-colors text-sm font-medium">Proceso</a>
             <a href="#consultation">
               <Button variant="outline" size="sm" className="border-emerald-primary/30 text-midnight hover:bg-emerald-primary/5">Contacto</Button>
@@ -51,11 +57,11 @@ export default function Home() {
         </div>
       </nav>
 
-      <Hero />
+      <Hero onShowPortfolio={() => setShowPortfolio(true)} />
 
       <BentoServices />
 
-      <Portfolio />
+      <Portfolio isOpen={showPortfolio} onClose={() => setShowPortfolio(false)} />
 
       <div id="leads">
         <LeadForm />
@@ -116,7 +122,14 @@ export default function Home() {
               <ul className="space-y-4">
                 <li><a href="#" className="text-midnight/40 hover:text-emerald-primary transition-colors">Inicio</a></li>
                 <li><a href="#leads" className="text-midnight/40 hover:text-emerald-primary transition-colors">Servicios</a></li>
-                <li><a href="#portfolio" className="text-midnight/40 hover:text-emerald-primary transition-colors">Portafolio</a></li>
+                <li>
+                  <button
+                    onClick={() => setShowPortfolio(true)}
+                    className="text-midnight/40 hover:text-emerald-primary transition-colors"
+                  >
+                    Portafolio
+                  </button>
+                </li>
               </ul>
             </div>
 
