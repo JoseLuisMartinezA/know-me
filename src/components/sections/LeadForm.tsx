@@ -22,6 +22,12 @@ export function LeadForm() {
         e.preventDefault();
         setState('submitting');
 
+        if (!supabase) {
+            console.error('Supabase client is not initialized. Check your environment variables.');
+            setState('error');
+            return;
+        }
+
         const { error } = await supabase
             .from('leads')
             .insert([formData]);
