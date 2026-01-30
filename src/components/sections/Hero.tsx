@@ -60,9 +60,11 @@ export function Hero() {
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </a>
-                    <Button variant="outline" size="lg" className="rounded-[20px] bg-white border-black/5 hover:bg-slate text-midnight">
-                        Ver portafolio
-                    </Button>
+                    <a href="#portfolio">
+                        <Button variant="outline" size="lg" className="rounded-[20px] bg-white border-black/5 hover:bg-slate text-midnight">
+                            Ver portafolio
+                        </Button>
+                    </a>
                 </motion.div>
             </div>
 
