@@ -10,7 +10,7 @@
   --color-slate: #f8fafc;
 
   --font-body: var(--font-inter);
-  --font-heading: var(--font-jakarta);
+  --font-heading: var(--font-sora);
 
   @keyframes float {
 
@@ -28,6 +28,10 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

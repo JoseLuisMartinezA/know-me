@@ -1,0 +1,102 @@
+﻿🚀 Briefing de Desarrollo: Web Corporativa Knowme
+Concepto: Web minimalista, de alto impacto visual, orientada a la conversión segmentada. Estilo: Premium, High-Tech, Espacios negativos (whitespace) amplios.
+________________
+
+
+1. Arquitectura de Navegación (Secciones)
+La web se estructurará en 6 secciones clave diseñadas para guiar al usuario desde la curiosidad hasta el contacto.
+SECCIÓN 1: Hero & Identidad (First Fold)
+* Contenido: H1 impactante, subtexto de valor y CTA principal.
+* Elemento Visual: Fondo con un gradiente sutil animado o un video loop en 4K de texturas abstractas (muy lento).
+* Objetivo: Retener al usuario en menos de 3 segundos.
+SECCIÓN 2: El Selector (Segmentación de Audiencia)
+Esta es la sección más importante para el desarrollador.
+* Diseño: Tres tarjetas (Cards) verticales que ocupan el ancho de la pantalla (33vw cada una).
+* Interacción: Al pasar el ratón (Hover) por encima de una, las otras dos se oscurecen un 50% y la seleccionada se expande ligeramente.
+* Contenido de Tarjetas:
+   1. Business: Icono minimal + "Impulsa tu comercio".
+   2. Creators: Icono minimal + "Potencia tu influencia".
+   3. Pro: Icono minimal + "Eleva tu carrera".
+SECCIÓN 3: Detalle de Servicios (Scroll Espaciado)
+Tres bloques de contenido alternados (Imagen/Texto) que detallan lo que ofreciste en el informe anterior:
+* Bloque Creators: Mockup de un iPhone mostrando un portfolio vertical. Texto sobre Media Kits y centralización de redes.
+* Bloque Business: Mockup de un iPad con una web de negocio local y una captura de Google Maps optimizada.
+* Bloque Pro: Mockup de un MacBook Pro con un CV web elegante y perfil de LinkedIn.
+SECCIÓN 4: "The Knowme Method" (Proceso)
+* Diseño: Una línea de tiempo horizontal o vertical muy fina.
+* Pasos:
+   1. Discovery: Auditoría de marca.
+   2. Design: Construcción visual y técnica.
+   3. Go Live: Lanzamiento y optimización.
+SECCIÓN 5: Social Proof & Autoridad
+* Contenido: Carrusel de logotipos de tecnologías que usas (ej. WordPress, Shopify, Adobe, React) para dar seguridad técnica.
+* Testimonios: Tres frases cortas en cursiva de clientes ficticios (o reales) con su nombre y cargo.
+SECCIÓN 6: Formulario de Conversión (Footer Activo)
+* Diseño: Fondo oscuro para contrastar con el resto de la web.
+* Campos: Nombre, Email, Select de "Interés" (Creators, Business, Pro) y Mensaje.
+* CTA: "Hagámoslo realidad".
+________________
+
+
+2. Guía de Estilo para el Desarrollador (UI/UX)
+* Tipografía: * Headings: Sora o Syne (fuentes modernas de tech).
+   * Body: Inter (máxima legibilidad).
+* Animaciones (GSAP/Framer Motion): * Reveal on scroll: Los textos deben aparecer con un ligero desplazamiento hacia arriba al bajar.
+   * Cursor personalizado: Un círculo pequeño que reaccione al pasar sobre los botones.
+* Responsive: Prioridad absoluta al Mobile First. El selector de la Sección 2 debe convertirse en un carrusel táctil o lista vertical en móviles.
+________________
+
+
+3. Copywriting (Textos para el desarrollador)
+H1: Tu nombre es tu marca. Haz que signifique algo. H2 (Selector): Elige tu camino en el mundo digital. H2 (Contacto): ¿Estás listo para que el mundo te conozca?
+________________
+
+
+4. Requerimientos Técnicos (Backend/SEO)
+1. Velocidad: Puntuación en PageSpeed > 90/100 (Uso de imágenes WebP y carga diferida).
+2. SEO: Meta-tags configurados para cada pilar (Creators, Business, Pro).
+3. Seguridad: Certificado SSL y protección básica de formularios contra spam.
+
+
+
+
+¿Una sola página o varias?
+La tendencia actual para agencias de diseño premium y minimalista es una Landing Page principal (Single Page) potente que use "scroll narrativo" para retener al usuario, pero con páginas internas específicas para los tres servicios.
+¿Por qué?
+1. SEO: Si alguien busca "portfolio para creadores de contenido", Google te posicionará mejor si tienes una página dedicada a eso (knowme.com/creators) que si solo eres una sección en una web genérica.
+2. Claridad: No saturas al usuario. En la Home le das el "mordisco" y si le interesa, hace clic para ver el "menú completo" del servicio.
+________________
+
+
+Estructura de Navegación sugerida
+* Home: Presentación general y el "Selector" (el punto de entrada).
+* Servicios (Dropdown en el Navbar):
+   * Knowme. Creators
+   * Knowme. Business
+   * Knowme. Pro
+* Nosotros: La filosofía de marca.
+* Contacto: Botón destacado (CTA).
+________________
+
+
+Sección: "Sobre Nosotros" (Knowme Philosophy)
+Esta sección debe ir después del Hero o justo antes del formulario de contacto para humanizar la marca.
+Título: La era digital no tiene por qué ser fría.
+Texto: "En Knowme no creemos en soluciones en serie. Creemos que cada pequeño empresario tiene una historia que merece ser contada con elegancia y que cada creador es, en esencia, una empresa propia.
+Nacimos para cerrar la brecha entre el talento y la tecnología. Mientras otros se limitan a 'hacer webs', nosotros construimos identidades digitales. Combinamos la precisión del diseño moderno con la calidez de un trato personalizado. Nuestra misión es simple: que cuando alguien te busque, lo que encuentre esté a la altura de quien eres."
+________________
+
+
+Informe para el Desarrollador: Especificaciones de Navegación
+1. Comportamiento del Navbar:
+* Sticky Header: El menú debe ser fijo y volverse traslúcido o cambiar de color al hacer scroll para no perder la navegación.
+* Efecto de enlace activo: El pilar en el que se encuentre el usuario (Business, Creators o Pro) debe estar subrayado sutilmente en el menú.
+2. Transiciones de Página:
+* Para mantener el estilo "pro", implementar Page Transitions (un fundido suave a blanco o negro entre páginas) para que la navegación no se sienta como un "salto" brusco.
+3. El Selector de la Home (Lógica de enlaces):
+* Cada una de las 3 tarjetas del selector en la Home debe ser un enlace directo a su página de servicio correspondiente:
+   * Click en Card Creators -> Redirige a /creators
+   * Click en Card Business -> Redirige a /business
+   * Click en Card Pro -> Redirige a /pro
+4. Footer Global:
+* Debe repetirse en todas las páginas, incluyendo los accesos directos a redes sociales y el aviso legal, manteniendo el minimalismo (máximo 3 columnas de texto).

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,15 +8,17 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "know me. | Infraestructura digital para negocios de alto rendimiento",
-  description: "Diseño webs personalizadas, rápidas y optimizadas para transformar tu visión en una herramienta de ventas de élite.",
+  title: "Knowme | Identidades Digitales de Alto Rendimiento",
+  description: "Diseño y desarrollo web premium para creadores, empresas y profesionales. Potenciamos tu marca personal y comercial con infraestructura digital de élite.",
+  keywords: ["desarrollo web", "diseño premium", "personal branding", "seo local", "creadores de contenido", "knowme"],
 };
+
 
 export default function RootLayout({
   children,
@@ -23,8 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="es" className={`${inter.variable} ${sora.variable}`}>
       <body className="antialiased selection:bg-emerald-primary/10 selection:text-emerald-secondary">
+        <CustomCursor />
         <main className="min-h-screen bg-white text-midnight">
           {children}
         </main>
